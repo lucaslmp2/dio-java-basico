@@ -2,7 +2,7 @@ import java.util.Locale;
 import java.util.Scanner;
 
 public class SobreMim {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         Scanner ler = new Scanner(System.in).useLocale(Locale.US);
         System.out.println("Qual é o seu nome?: ");
         String nome = ler.nextLine();
