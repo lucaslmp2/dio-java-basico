@@ -1,0 +1,19 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Operadores",
+            "request": "launch",
+            "mainClass": "Operadores",
+            "projectName": "dio-java-basic",
+            "cwd": "${workspaceFolder}/dio-java-basic/Estudos/Lucas/SegundoDia",
+            "modulePaths": [
+                "${workspaceFolder}/dio-java-basic/Estudos/Lucas/SegundoDia"
+            ],
+            "classPaths": [
+                "${workspaceFolder}/dio-java-basic/Estudos/Lucas/SegundoDia"
+            ]
+        }
+    ]
+}
