@@ -14,6 +14,20 @@
             "classPaths": [
                 "${workspaceFolder}/dio-java-basic/Estudos/Lucas/SegundoDia"
             ]
+        },
+        {
+            "type": "java",
+            "name": "Launch SobreMim",
+            "request": "launch",
+            "mainClass": "SobreMim",
+            "projectName": "dio-java-basic",
+            "cwd": "${workspaceFolder}/dio-java-basic/Estudos/Lucas/TerceiroDia",
+            "modulePaths": [
+                "${workspaceFolder}/dio-java-basic/Estudos/Lucas/TerceiroDia"
+            ],
+            "classPaths": [
+                "${workspaceFolder}/dio-java-basic/Estudos/Lucas/TerceiroDia"
+            ]
         }
     ]
 }
