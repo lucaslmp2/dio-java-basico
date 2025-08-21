@@ -1,10 +1,12 @@
-package TerceiroDia;
+package SetimoDia;
 
+import java.util.InputMismatchException;
 import java.util.Locale;
 import java.util.Scanner;
 
-public class SobreMim {
+public class TryCatch {
     public static void main(String[] args) throws Exception {
+        try{
             Scanner ler = new Scanner(System.in).useLocale(Locale.US);
             System.out.println("Qual é o seu nome?: ");
             String nome = ler.nextLine();
@@ -18,6 +20,9 @@ public class SobreMim {
             float peso = ler.nextFloat();
             System.out.println("Olá, meu nome é " + nome + " " + sobrenome + ", tenho " + idade + " anos, minha altura é " + altura + "m e peso " + peso + "kg.");
             ler.close();
-        
+        }
+        catch(InputMismatchException e){
+            System.out.println("Os campos de Idade, Altura e Peso devem ser números.");
+        }
     }
 }
