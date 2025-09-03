@@ -11,7 +11,7 @@ public class ProcessoSeletivo {
         int candidatosSelecionados = 0;
         int candidatosAtual = 0;
         double salarioBase = 2000.0;
-        while(candidatosSelecionados < 5){
+        while(candidatosSelecionados < 5 && candidatosAtual < candidatos.length){
             String candidato = candidatos[candidatosAtual];
             double salarioPretendido = valorPretendido();
             System.out.println("O candidato " + candidato + " solicitou este valor de salário " + salarioPretendido);
