@@ -4,28 +4,34 @@ import java.util.Scanner;
 
 public class calculadoraDeSalario {
     public static void main(String[] args) {
+        adicionarDados(null, null);
+    }
+    static double adicionarDados(double [] salarioBruto, double [] adicionalBeneficios){
         Scanner leitor = new Scanner(System.in);
-        double [] salarioBruto = new double[5];
+        salarioBruto = new double[5];
         String [] funcionarios = {"Pedro","José", "Maria", "João", "Bryan"};
-        double [] adicionalBeneficios = new double[5];
+        adicionalBeneficios = new double[5];
         double [] percentualDeImposto = new double [5];
         double [] salario = new double [5];
-            for(int sb = 0;sb<funcionarios.length;sb++){
-                System.out.println("--------------------------Next-------------------------");
-                System.out.println("Digite o salário bruto de: "+funcionarios[sb]);
-                System.out.println("-------------------------------------------------------");
-                salarioBruto[sb] = leitor.nextDouble();
-                System.out.println("-------------------------------------------------------");
-                System.out.println("Digite o adicional dos benefícios: "+funcionarios[sb]);
-                System.out.println("-------------------------------------------------------");
-                adicionalBeneficios[sb] = leitor.nextDouble();
-                System.out.println("-------------------------------------------------------");
-                percentualDeImposto[sb] = calculoDeImposto(salarioBruto[sb]);
-                salario[sb] = percentualDeImposto[sb] + adicionalBeneficios[sb];
-                System.out.printf("O salário de "+(funcionarios[sb])+" é: R$%.2f\n",salario[sb]);
-                System.out.println("-------------------------------------------------------");
-            }
+        for(int sb = 0;sb<funcionarios.length;sb++){
+            System.out.println("--------------------------Next-------------------------");
+            System.out.println("Digite o salário bruto de: "+funcionarios[sb]);
+            System.out.println("-------------------------------------------------------");
+            salarioBruto[sb] = leitor.nextDouble();
+            System.out.println("-------------------------------------------------------");
+            System.out.println("Digite o adicional dos benefícios: "+funcionarios[sb]);
+            System.out.println("-------------------------------------------------------");
+            adicionalBeneficios[sb] = leitor.nextDouble();
+            System.out.println("-------------------------------------------------------");
+            percentualDeImposto[sb] = calculoDeImposto(salarioBruto[sb]);
+            salario[sb] = percentualDeImposto[sb] + adicionalBeneficios[sb];
+            System.out.printf("O salário de "+(funcionarios[sb])+" é: R$%.2f\n",salario[sb]);
+            System.out.println("-------------------------------------------------------");
         }
+        leitor.close();
+        return adicionarDados(salarioBruto, adicionalBeneficios);
+        
+    }
     static double calculoDeImposto(double salarioBruto){
         if(salarioBruto<=1100.0){
             salarioBruto = salarioBruto - (salarioBruto * 0.05);
