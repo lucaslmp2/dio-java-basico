@@ -6,7 +6,7 @@ public class calculadoraDeSalario {
     public static void main(String[] args) {
         Scanner leitor = new Scanner(System.in);
         double [] salarioBruto = new double[5];
-        String [] funcionarios = {"pedro","jose", "maria", "joao", "bryan"};
+        String [] funcionarios = {"Pedro","José", "Maria", "João", "Bryan"};
         double [] adicionalBeneficios = new double[5];
         double [] percentualDeImposto = new double [5];
         double [] salario = new double [5];
