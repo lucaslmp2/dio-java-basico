@@ -33,11 +33,11 @@ public class calculadoraDeSalario {
         
     }
     static double calculoDeImposto(double salarioBruto){
-        if(salarioBruto<=1100.0){
+        if(salarioBruto <= 1100.0){
             salarioBruto = salarioBruto - (salarioBruto * 0.05);
-        }else if(salarioBruto>1100.01 && salarioBruto<=2500.0){
+        }else if(salarioBruto > 1100.01 && salarioBruto <= 2500.0){
             salarioBruto = salarioBruto - (salarioBruto * 0.10);
-        }else if (salarioBruto>2500.0) {
+        }else if (salarioBruto > 2500.0) {
             salarioBruto = salarioBruto - (salarioBruto * 0.15);
         }
         return salarioBruto;
