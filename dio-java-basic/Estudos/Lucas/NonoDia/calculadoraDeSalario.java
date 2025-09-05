@@ -6,22 +6,22 @@ public class calculadoraDeSalario {
     public static void main(String[] args) {
         adicionarDados(null, null);
     }
-    static double adicionarDados(double [] salarioBruto, double [] adicionalBeneficios){
+    static float adicionarDados(float [] salarioBruto, float [] adicionalBeneficios){
         Scanner leitor = new Scanner(System.in);
-        salarioBruto = new double[5];
+        salarioBruto = new float[5];
         String [] funcionarios = {"Pedro","José", "Maria", "João", "Bryan"};
-        adicionalBeneficios = new double[5];
-        double [] percentualDeImposto = new double [5];
-        double [] salario = new double [5];
+        adicionalBeneficios = new float[5];
+        float [] percentualDeImposto = new float [5];
+        float [] salario = new float [5];
         for(int sb = 0;sb<funcionarios.length;sb++){
-            System.out.println("--------------------------Next-------------------------");
+            System.out.println("-----------------Inserir Salário-----------------------");
             System.out.println("Digite o salário bruto de: "+funcionarios[sb]);
             System.out.println("-------------------------------------------------------");
-            salarioBruto[sb] = leitor.nextDouble();
+            salarioBruto[sb] = leitor.nextFloat();
             System.out.println("-------------------------------------------------------");
             System.out.println("Digite o adicional dos benefícios: "+funcionarios[sb]);
             System.out.println("-------------------------------------------------------");
-            adicionalBeneficios[sb] = leitor.nextDouble();
+            adicionalBeneficios[sb] = leitor.nextFloat();
             System.out.println("-------------------------------------------------------");
             percentualDeImposto[sb] = calculoDeImposto(salarioBruto[sb]);
             salario[sb] = percentualDeImposto[sb] + adicionalBeneficios[sb];
@@ -32,13 +32,13 @@ public class calculadoraDeSalario {
         return adicionarDados(salarioBruto, adicionalBeneficios);
         
     }
-    static double calculoDeImposto(double salarioBruto){
+    static float calculoDeImposto(float salarioBruto){
         if(salarioBruto <= 1100.0){
-            salarioBruto = salarioBruto - (salarioBruto * 0.05);
+            salarioBruto = (float) (salarioBruto - (salarioBruto * 0.05));
         }else if(salarioBruto > 1100.01 && salarioBruto <= 2500.0){
-            salarioBruto = salarioBruto - (salarioBruto * 0.10);
+            salarioBruto = (float) (salarioBruto - (salarioBruto * 0.10));
         }else if (salarioBruto > 2500.0) {
-            salarioBruto = salarioBruto - (salarioBruto * 0.15);
+            salarioBruto = (float) (salarioBruto - (salarioBruto * 0.15));
         }
         return salarioBruto;
     }
