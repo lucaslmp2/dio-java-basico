@@ -1,4 +1,4 @@
-package DecimaDia;
+package DecimoDia;
 import java.util.Scanner;
 public class desafio1 {
     public static void main(String[] args) {
