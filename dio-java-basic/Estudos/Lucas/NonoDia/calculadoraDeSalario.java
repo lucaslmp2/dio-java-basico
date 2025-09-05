@@ -14,19 +14,21 @@ public class calculadoraDeSalario {
         float [] percentualDeImposto = new float [5];
         float [] salario = new float [5];
         for(int sb = 0;sb<funcionarios.length;sb++){
-            System.out.println("-----------------Inserir Salário-----------------------");
+            System.out.println("\\____________________________________________________________/");
+            System.out.println("                          Inserir Salário                      ");
+            System.out.println("|\\__________________________________________________________/|");
             System.out.println("Digite o salário bruto de: "+funcionarios[sb]);
-            System.out.println("-------------------------------------------------------");
+            System.out.println("_______________________________________________________________");
             salarioBruto[sb] = leitor.nextFloat();
-            System.out.println("-------------------------------------------------------");
+            System.out.println("_______________________________________________________________");
             System.out.println("Digite o adicional dos benefícios: "+funcionarios[sb]);
-            System.out.println("-------------------------------------------------------");
+            System.out.println("_______________________________________________________________");
             adicionalBeneficios[sb] = leitor.nextFloat();
-            System.out.println("-------------------------------------------------------");
+            System.out.println("_______________________________________________________________");
             percentualDeImposto[sb] = calculoDeImposto(salarioBruto[sb]);
             salario[sb] = percentualDeImposto[sb] + adicionalBeneficios[sb];
-            System.out.printf("O salário de "+(funcionarios[sb])+" é: R$%.2f\n",salario[sb]);
-            System.out.println("-------------------------------------------------------");
+            System.out.printf("                  O salário de "+(funcionarios[sb])+" é: R$%.2f\n",salario[sb]);
+            System.out.println("|\\__________________________________________________________/|");
         }
         leitor.close();
         return adicionarDados(salarioBruto, adicionalBeneficios);
